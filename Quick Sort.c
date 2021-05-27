@@ -26,7 +26,7 @@ void printArray(int arr[],int l,int h)
 {
     int k;
     for (k=l; k<=h;k++){
-        printf("%d ",arr[k]);
+        printf("%d  ",arr[k]);
     }
 }
 int main(){
