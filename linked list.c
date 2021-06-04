@@ -23,7 +23,8 @@ int main(){
     second->next =third;
     (*third).data=89;
    third->next = NULL;
-     /* creating a node between any two nodes
+     
+   /* CREATING A NODE BETWEEN ANY TWO NODES
 
    struct node*ne;
    ne=(struct node*)malloc(sizeof(struct node));
@@ -42,5 +43,37 @@ int main(){
    (*pre).next=ne;
    (*ne).next=flow;*/
     
-    linkedlisttraversal(head);
+    
+    /*ADDING A NODE BEFORE HEAD
+
+    struct node*ne;
+    ne=(struct node*)malloc(sizeof(struct node));
+   (*ne).data=78;
+   (*ne).next=head;
+    head=ne;*/
+
+   /* ADDING A NODE AT END
+
+    struct node*ne;
+    ne=(struct node*)malloc(sizeof(struct node));
+   (*ne).data=78;
+   struct node*flow;
+   flow=(struct node*)malloc(sizeof(struct node));
+   flow=head;
+   while((*flow).next!=NULL){
+    flow=(*flow).next;
+   }
+   (*flow).next=ne;
+   (*ne).next=NULL;*/
+
+
+  /*ADDING A NODE AFTER A PARTICULAR NODE (LET HERE BE SECOND NODE)
+
+    struct node*ne;
+    ne=(struct node*)malloc(sizeof(struct node));
+   (*ne).data=78;
+   (*ne).next=(*second).next;
+   (*second).next=ne;*/
+    
+   linkedlisttraversal(head);
 }
