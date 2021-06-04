@@ -23,5 +23,24 @@ int main(){
     second->next =third;
     (*third).data=89;
    third->next = NULL;
+     /* creating a node between any two nodes
+
+   struct node*ne;
+   ne=(struct node*)malloc(sizeof(struct node));
+   (*ne).data=78;
+   struct node*flow;
+   flow=(struct node*)malloc(sizeof(struct node));
+    struct node*pre;
+    pre=(struct node*)malloc(sizeof(struct node));
+   flow=head;
+   int count=0;
+   while(count<2){
+        pre=flow;
+       flow=(*flow).next;
+       count++;
+   }
+   (*pre).next=ne;
+   (*ne).next=flow;*/
+    
     linkedlisttraversal(head);
 }
