@@ -75,5 +75,38 @@ int main(){
    (*ne).next=(*second).next;
    (*second).next=ne;*/
     
+     /*DELETION OF A PARTICULAR GIVEN NODE (LET IT HERE BE SECOND NODE)
+
+    (*head).next=(*second).next;*/
+
+    /*DELETION OF HEAD NODE
+
+    head=second;*/
+
+     /*DELETION OF END NODE
+
+    struct node*flow;
+    flow=(struct node*)malloc(sizeof(struct node));
+    flow=head;
+    while((*(*flow).next).next!=NULL){
+        flow=(*flow).next;
+    }
+    (*flow).next=NULL;*/
+
+   /*DELETION OF ANY NODE IN BETWEEN(according to index)(let here be of index 2)
+
+    struct node*flow;
+    flow=(struct node*)malloc(sizeof(struct node));
+    flow=head;
+    struct node*toremove;
+    toremove=(struct node*)malloc(sizeof(struct node));
+    int index=0;
+     while(index<1){   //(2-1) is for (index-1)
+        flow=(*flow).next;
+        toremove=(*flow).next;
+        index++;
+    }
+    (*flow).next=(*toremove).next;*/
+    
    linkedlisttraversal(head);
 }
