@@ -30,9 +30,7 @@ int main(){
    ne=(struct node*)malloc(sizeof(struct node));
    (*ne).data=78;
    struct node*flow;
-   flow=(struct node*)malloc(sizeof(struct node));
-    struct node*pre;
-    pre=(struct node*)malloc(sizeof(struct node));
+   struct node*pre;
    flow=head;
    int count=0;
    while(count<2){
@@ -58,7 +56,6 @@ int main(){
     ne=(struct node*)malloc(sizeof(struct node));
    (*ne).data=78;
    struct node*flow;
-   flow=(struct node*)malloc(sizeof(struct node));
    flow=head;
    while((*flow).next!=NULL){
     flow=(*flow).next;
@@ -81,12 +78,13 @@ int main(){
 
     /*DELETION OF HEAD NODE
 
-    head=second;*/
+    struct node*ptr=head;
+    head=(*head).next;
+    free(ptr);*/
 
      /*DELETION OF END NODE
 
     struct node*flow;
-    flow=(struct node*)malloc(sizeof(struct node));
     flow=head;
     while((*(*flow).next).next!=NULL){
         flow=(*flow).next;
@@ -96,10 +94,8 @@ int main(){
    /*DELETION OF ANY NODE IN BETWEEN(according to index)(let here be of index 2)
 
     struct node*flow;
-    flow=(struct node*)malloc(sizeof(struct node));
     flow=head;
     struct node*toremove;
-    toremove=(struct node*)malloc(sizeof(struct node));
     int index=0;
      while(index<1){   //(2-1) is for (index-1)
         flow=(*flow).next;
