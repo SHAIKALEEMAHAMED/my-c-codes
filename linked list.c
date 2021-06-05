@@ -74,8 +74,20 @@ int main(){
     
      /*DELETION OF A PARTICULAR GIVEN NODE (LET IT HERE BE SECOND NODE)
 
-    (*head).next=(*second).next;*/
-
+    struct node*p;
+    p=second;
+    (*head).next=(*second).next;
+      free(second);*/
+     /*if previous node not known create a variable and traverse to the targetted previous node !!!
+    
+    for example :
+    struct node*p;
+    p=head;
+    while((*p).next!=second){
+        p=(*p).next;
+    }
+    (*p).next=(*second).next;*/
+    
     /*DELETION OF HEAD NODE
 
     struct node*ptr=head;
@@ -89,7 +101,9 @@ int main(){
     while((*(*flow).next).next!=NULL){
         flow=(*flow).next;
     }
-    (*flow).next=NULL;*/
+    struct node*p=(*flow).next;
+    (*flow).next=NULL;
+    free(p);*/
 
    /*DELETION OF ANY NODE IN BETWEEN(according to index)(let here be of index 2)
 
@@ -102,7 +116,8 @@ int main(){
         toremove=(*flow).next;
         index++;
     }
-    (*flow).next=(*toremove).next;*/
+    (*flow).next=(*toremove).next;
+    free(toremove);*/
     
    linkedlisttraversal(head);
 }
